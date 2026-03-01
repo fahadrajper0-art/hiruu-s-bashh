@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+h1 span, h2 {
+  color: #ff6ec7;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  background: #ff6ec7;
+  color: #000;
+}
+
+.fade {
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  min-width: 250px;
+  background: #111;
+  border-radius: 15px;
+  padding: 10px;
+  scroll-snap-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Notes */
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note {
+  background: #111;
+  padding: 15px;
+  border-radius: 15px;
+  animation: fadeIn 1s ease;
+}
+
+.final span {
+  color: #ff6ec7;
+  font-size: 2.2rem;
+}
